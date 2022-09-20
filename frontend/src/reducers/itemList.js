@@ -11,7 +11,7 @@ import {
   PROFILE_PAGE_UNLOADED,
   PROFILE_FAVORITES_PAGE_LOADED,
   PROFILE_FAVORITES_PAGE_UNLOADED,
-} from "../constants/actionTypes";
+} from '../constants/actionTypes';
 
 const reducer = (state = {}, action) => {
   switch (action.type) {
@@ -19,7 +19,7 @@ const reducer = (state = {}, action) => {
     case ITEM_UNFAVORITED:
       return {
         ...state,
-        items: state.items.map((item) => {
+        items: state.items.map(item => {
           if (item.slug === action.payload.item.slug) {
             return {
               ...item,
@@ -56,7 +56,7 @@ const reducer = (state = {}, action) => {
         tab: null,
         title: action.title,
         currentPage: 0,
-      }
+      };
     case HOME_PAGE_LOADED:
       return {
         ...state,

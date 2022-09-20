@@ -15,8 +15,8 @@ const Banner = (props) => {
         <img src={logo} alt="banner" />
         <div className="search-container">  
           <span id="get-part">A place to get</span>
-          <form id="search-box" onSubmit={(e) => handleSearch(e, props.onSearch)} onChange={(e) => handleSearch(e, props.onSearch)}>
-            <input type="text" placeholder="What is it that you truly desire?" />
+          <form id="search-box-container" onSubmit={(e) => handleSearch(e, props.onSearch)} onChange={(e) => handleSearch(e, props.onSearch)}>
+            <input id="search-box" type="text" placeholder="What is it that you truly desire?" />
             <button type="submit"><i class="fa fa-search"></i></button>
           </form>
           <span> the cool stuff.</span>

@@ -67,14 +67,14 @@ body {
   align-items: center;
 }
 
-#search-box {
+#search-box-container{
   margin: 0 15px;
   background: white;
   border-radius: 5px;
   width: 40%;
 }
 
-#search-box input {
+#search-box-container input {
   background: none;
   border: none;
   padding: 10px;
@@ -82,7 +82,7 @@ body {
   width: 90%;
 }
 
-#search-box button {
+#search-box-container button {
   background: none;
   border: none;
   padding: 10px;

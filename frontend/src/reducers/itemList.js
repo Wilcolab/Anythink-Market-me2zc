@@ -1,15 +1,10 @@
 import {
-  ITEM_FAVORITED,
-  ITEM_UNFAVORITED,
-  SET_PAGE,
   APPLY_TAG_FILTER,
-  HOME_PAGE_LOADED,
-  HOME_PAGE_UNLOADED,
-  CHANGE_TAB,
-  PROFILE_PAGE_LOADED,
-  PROFILE_PAGE_UNLOADED,
-  PROFILE_FAVORITES_PAGE_LOADED,
-  PROFILE_FAVORITES_PAGE_UNLOADED,
+  APPLY_TITLE_FILTER, CHANGE_TAB, HOME_PAGE_LOADED,
+  HOME_PAGE_UNLOADED, ITEM_FAVORITED,
+  ITEM_UNFAVORITED, PROFILE_FAVORITES_PAGE_LOADED,
+  PROFILE_FAVORITES_PAGE_UNLOADED, PROFILE_PAGE_LOADED,
+  PROFILE_PAGE_UNLOADED, SET_PAGE
 } from "../constants/actionTypes";
 
 const reducer = (state = {}, action) => {
@@ -46,6 +41,15 @@ const reducer = (state = {}, action) => {
         tag: action.tag,
         currentPage: 0,
       };
+    case APPLY_TITLE_FILTER:
+      return {
+        ...state,
+        pager: action.pager,
+        items: action.payload.items,
+        itemsCount: action.payload.itemsCount,
+        title: action.title,
+        currentPage: 0
+      }
     case HOME_PAGE_LOADED:
       return {
         ...state,

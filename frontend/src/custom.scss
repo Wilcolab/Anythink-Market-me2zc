@@ -60,7 +60,7 @@ body {
   min-width: 800px;
 }
 
-#search-box {
+.search-container {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -68,11 +68,11 @@ body {
   align-items: center;
 }
 
-#search-box > form {
+.search-container > form {
   margin: 0 10px;
 }
 
-#search-box > form > input {
+.search-container > form > input {
   padding: 10px;
   border-radius: 10px;
   border: none;

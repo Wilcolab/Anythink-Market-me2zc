@@ -19,10 +19,10 @@ const Banner = (props) => {
     <div className="banner text-white">
       <div className="container p-4 text-center">
         <img src={logo} alt="banner" />
-        <div id="search-box">
+        <div className="search-container">
           <span>A place to get</span>
           <form>
-            <input type={"text"} value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder={"What is it that you truly desire?"}/>
+            <input id="search-box" type={"text"} value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder={"What is it that you truly desire?"}/>
           </form>
           <span> the cool stuff.</span>
         </div>

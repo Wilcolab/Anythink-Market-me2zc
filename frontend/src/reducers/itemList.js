@@ -42,13 +42,14 @@ const reducer = (state = {}, action) => {
         currentPage: 0,
       };
     case APPLY_TITLE_FILTER:
+      console.log('ACTION', action);
       return {
         ...state,
         pager: action.pager,
         items: action.payload.items,
         itemsCount: action.payload.itemsCount,
         title: action.title,
-        currentPage: 0
+        currentPage: 0,
       }
     case HOME_PAGE_LOADED:
       return {

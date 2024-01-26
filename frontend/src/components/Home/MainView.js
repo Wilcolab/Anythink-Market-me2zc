@@ -1,8 +1,8 @@
-import React from "react";
-import { connect } from "react-redux";
-import agent from "../../agent";
-import { CHANGE_TAB } from "../../constants/actionTypes";
 import ItemList from "../ItemList";
+import React from "react";
+import agent from "../../agent";
+import { connect } from "react-redux";
+import { CHANGE_TAB } from "../../constants/actionTypes";
 
 const YourFeedTab = (props) => {
   if (props.token) {
@@ -92,7 +92,6 @@ const MainView = (props) => {
         loading={props.loading}
         itemsCount={props.itemsCount}
         currentPage={props.currentPage}
-        searchTerm={props.title}
       />
     </div>
   );
